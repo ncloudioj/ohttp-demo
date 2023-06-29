@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, DISCO!</title>
+    <style>
+      body {
+          display: inline-block;
+          position: relative;
+          top: 100px; left: 500px;
+          font: 1rem 'Fira Sans', sans-serif;
+      }
+      img {
+        height: 150px;
+        width: 300px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/dark.min.css">
+    <script type="module">
+      import hljs from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/es/highlight.min.js';
+      import json from 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/es/languages/json.min.js';
+      hljs.registerLanguage('json', json);
+      hljs.highlightAll();
+    </script>
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <script src="./bootstrap.js"></script>
+    <script type="module" src="./index.js"></script>
+    <div id="body">
+      <div>
+        <img src = "./hustle.svg" alt="Let's dance!"/>
+        <img src = "./disco_ball.svg" alt="Let's dance!"/>
+      <div>
+      </br>
+      <div>
+        <label for="interests">Your Interests :</label>
+        <input type="text" id="interests" name="interests" required
+           minlength="4" maxlength="50" size="50">
+      </div>
+      </br>
+      <div>
+        <label for="search-for">Searching For:</label>
+        <input type="search" id="search-for" name="search-for" required
+           minlength="1" maxlength="20" size="50">
+      </div>
+      </br>
+      <div>
+        <label for="result">Our Suggestions:</label>
+        <pre>
+          <code id="result" class="language-json"></code>
+        </pre>
+      </div>
+    </div>
+  </body>
+</html>
